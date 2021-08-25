@@ -7,5 +7,9 @@ public class StackQueueRunner {
         linkedList.push(70);
         linkedList.show();
 
+        linkedList.pop();
+        linkedList.pop();
+        linkedList.show();
+
     }
 }
