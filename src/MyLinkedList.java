@@ -2,7 +2,7 @@ public class MyLinkedList {
     Node head;
     int totalSize;
 
-    private void add(int key){
+    public void add(int key){
         Node node = new Node();
         node.key = key;
         node.next = null;
@@ -19,8 +19,8 @@ public class MyLinkedList {
     }
 
     public void push(int key){
-        add(key);
-
+        System.out.println("Storing "+ key);
+        insertAtStart(key);
     }
 
     public void peak(){
@@ -75,9 +75,18 @@ public class MyLinkedList {
 
     public void show(){
         Node n = head;
+
         while (n != null) {
             System.out.println(n.key);
             n=n.next;
         }
+    }
+
+    public void insertAtStart(int key){
+        Node node = new Node();
+        node.key = key;
+        node.next = null;
+        node.next = head;
+        head = node;
     }
 }
